@@ -21,6 +21,18 @@ export class HomeComponent implements OnInit {
   usersArray: any = [{}]
   id = localStorage.getItem('id')
 userName=localStorage.getItem('user')
+
+userDetails = {
+  sender: localStorage.getItem('user')
+}
+mutedUsers:any = []
+  blockedUsers:any = []
+  loginedUserDetails:any = {}
+
+
+
+
+
   constructor(private breakpointObserver:BreakpointObserver,private router:Router,private chatService:ChatService) { }
   onlineStatus=true
   ngOnInit(): void {
@@ -64,7 +76,13 @@ userName=localStorage.getItem('user')
     localStorage.removeItem('token');
     this.router.navigateByUrl('/login')
   }
-
+  loginedUser(){
+    this.chatService.loginedUser(this.userDetails.sender).subscribe(res=>{
+      this.loginedUserDetails = res
+      this.mutedUsers = this.loginedUserDetails.mutedUsers
+      this.blockedUsers = this.loginedUserDetails.blockedUsers
+    })
+  }
   }
 
 

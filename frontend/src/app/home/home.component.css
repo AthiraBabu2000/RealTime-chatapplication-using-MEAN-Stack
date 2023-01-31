@@ -1,14 +1,15 @@
+
 .body{
     height: 100vh;
 }
 
 a{
-    color: wheat !important;
+    color: whitesmoke !important;
 }
 mat-toolbar{
     min-height: 30px;
     height: 7vh;
-    background-color: #B7B78A;
+    background-color: #1C6758;
 }
 
 .example-container {
@@ -19,14 +20,15 @@ mat-toolbar{
   .example-sidenav-content {
     /* display: flex; */
     height: 100%;
-    background-color: #658864;
+    background-color: #282A3A;
 
   }
 
   .example-sidenav {
     padding: 0 !important;
     width: 300px;
-    background-color: #658864;
+    background-color:#282A3A;
+
   }
 
 .profile-pic{
@@ -44,7 +46,7 @@ mat-toolbar{
     margin-right: 10px;
 }
 .brand{
-    color: wheat;
+    color: whitesmoke;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     margin-top: 5px;
@@ -73,25 +75,22 @@ mat-toolbar{
 
 
 .profile-bar{
-    background-color: #B7B78A;
+    background-color: #1C6758;
     /* margin-right: 0; */
     position: sticky;
     top: 0;
     z-index: 100;
 }
 .break{
-    color: wheat !important;
-    background-color: wheat !important;
+    color: whitesmoke !important;
+    background-color: whitesmoke !important;
     margin: 7px;
 }
 
 .users:hover{
-    background-color: #B7B78A !important;
+    background-color: #404258 !important;
 }
 
-span{
-    display: block;
-}
 
 .sidenav{
     width: 100%;
@@ -108,62 +107,74 @@ span{
 .search input{
     width: 80%;
     border-radius: 5px 0px 0px 5px;
-    border: black;
+    border: none;
     padding: 2px;
     padding-left: 5px;
-    font-size: large;
+    font-size: small;
     height: 25px;
-    background-color: white;
- color:black;
-    /* border: 1px solid yellow; */
+    background-color: whitesmoke;
+    color: black;
 
 }
 .search button{
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 9px 5px 0px;
     height: 25.5px;
-    /* border: 1px solid red; */
     position: relative;
     top: 6.5px;
-    background-color: #658864;
+    background-color: whitesmoke;
     border: none;
     margin-left: 1px;
-    color: white;
+    color: black;
 }
 
 .search button:hover{
-    color: wheat;
+    color: darkgray;
 }
 
 .content{
-    background-color: #658864;
+    background-color: #404258;
     height: 93vh;
 }
 
 .is-active{
-    background-color: #658864 !important;
+    background-color: #19191f !important;
 }
 
 .last-msg{
     font-size: smaller;
     font-weight: lighter;
-    color: darkgrey;
+    color: rgb(124, 113, 113);
     letter-spacing: 0.5px;
 }
 
+.option{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.option:hover{
+    color: whitesmoke;
+}
+::ng-deep .mat-menu1{
+    width: 200px !important;
+    margin-left: 10px;
+    background-color:whitesmoke;
+    color: black;
 
+}
+::ng-deep .mat-menu2{
+    width: 200px !important;
+    margin-left: 30px;
+    background-color: whitesmoke;
+    color: Black;
 
-.username{
-  color:#658864;
 }
 
+.sub-heading{
+    margin-left: 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.username
+{
+  color: white;
+}

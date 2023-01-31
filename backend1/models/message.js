@@ -9,10 +9,7 @@ const msgSchema = mongoose.Schema({
         sender: String,
         receiver: String
     }],
-    blockedusers:[{
-        blockedUsername:String,
-        blockedbyUsername:String
-    }]
+   
 })
 
 var messageModel = mongoose.model('message',msgSchema)

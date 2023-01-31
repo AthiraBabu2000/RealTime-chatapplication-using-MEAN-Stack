@@ -21,7 +21,12 @@ dp:{
  updated_at:{
     type:Number,default:Date.now().valueOf()
 },
-
+mutedUsers:{
+    type : Array
+},
+blockedUsers:{
+    type : Array
+}
 });
 
 module.exports=mongoose.model('Users',userSchema)
