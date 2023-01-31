@@ -1,6 +1,6 @@
 .container-fluid{
   margin: auto;
-  background-image: url('../../assets/images/3227422.jpg') !important;
+  background-image: url('../../assets/images/pexels-fabian-wiktor-3573841.jpg') !important;
   height: 92vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,15 +64,17 @@ h1{
 
   }
 
-  h1{
-      position:absolute;
-      top: 100px;
-      left: 10px;
-      /* font-weight: bold; */
-      font-size: large;
 
-  }
+
 
 
 }
 
+.info h1{
+
+  font-size: 150px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding: 90px;
+}

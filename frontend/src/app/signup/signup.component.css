@@ -9,16 +9,16 @@ padding:100px;
 }
 
 .text-center{
-  background-color:#B7B78A;
+  background-color:white;
 }
 .button{
-background-color:#658864 ;
+background-color:#3b8576 ;
 
 height:35px;
 width: 100%;
 border: none;
 
-color: black;
+color: white;
 border: 2px ;
 
 padding: 1px 32px;
@@ -33,10 +33,16 @@ padding: 1px 32px;
 }
 
 .button:hover {
-  background-color:#4CAF50;
+  background-color:#035956;
   color: white;
 }
 
 .error{
   border: 1px solid red;
+}
+.card h1{
+
+  font-size: 40px;
+  color: #182C25;
+  font-family: 'Times New Roman', Times, serif;
 }

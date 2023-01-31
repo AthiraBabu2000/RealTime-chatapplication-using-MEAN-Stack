@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body{
-background-color:#658864;
+  background-image: url('../../frontend/src/assets/images/36.jpg') !important;
 }
 /* The navigation bar */
 
