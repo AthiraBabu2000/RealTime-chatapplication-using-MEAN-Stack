@@ -1,0 +1,43 @@
+
+
+<div class="body">
+  <div class="container">
+      <header class="chatbox-header">
+              <img class="profile-pic" src="assets/images/dp.jpg" alt="">
+              <span class="name">{{receiver.userName}}</span><br>
+              <!-- <h6 class="online">{{onlineStatus}}</h6> -->
+              <button class="option"mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon >more_vert</mat-icon>
+
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)=" openSnackBar()">
+                  <mat-icon>notifications_active</mat-icon>
+                  <span>notifications</span>
+                </button>
+                <button mat-menu-item (click)="block()">
+                  <mat-icon>block</mat-icon>
+                  <span>Block</span>
+                </button>
+               </mat-menu>
+      </header>
+      <div class="chatbox-body">
+          <div class="messages" *ngFor="let message of messages">
+              <div class="receive-msg" *ngIf="message.receiver === msg.sender">
+                  <p>{{ message.msg }}</p>
+              </div>
+              <div class="send-container">
+              <div class="send-msg" *ngIf="message.sender === msg.sender">
+                  <p>{{ message.msg }}</p>
+              </div>
+              </div>
+          </div>
+      </div>
+      <div class="chatbox-footer">
+          <form class="chatbox-footer" #message="ngForm">
+          <input class="msg formControl"  type="text" placeholder="Type a message"  name="mssg" #mssg="ngModel" [(ngModel)]="newMessage" autocomplete="off" >
+          <mat-icon class="send"(click)="sendMsg()">send</mat-icon>
+          </form>
+      </div>
+  </div>
+</div>

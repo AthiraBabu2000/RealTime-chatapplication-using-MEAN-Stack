@@ -1,0 +1,42 @@
+
+
+
+.container{
+
+width:900px;
+padding:100px;
+
+}
+
+.text-center{
+  background-color:#B7B78A;
+}
+.button{
+background-color:#658864 ;
+
+height:35px;
+width: 100%;
+border: none;
+
+color: black;
+border: 2px ;
+
+padding: 1px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.button:hover {
+  background-color:#4CAF50;
+  color: white;
+}
+
+.error{
+  border: 1px solid red;
+}

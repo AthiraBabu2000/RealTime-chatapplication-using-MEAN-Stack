@@ -1,0 +1,48 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-5 mt-5 mt-b text-center">
+        <h1>TALKOLO</h1>
+
+        <div [ngClass]="className" role="alert">
+        {{message}}
+          <br>
+
+        </div>
+
+        <form [formGroup]="signupForm "(ngSubmit)="signup()"  class="text-left">
+          <div class="form-group">
+            <br>
+
+           <input type="text" class="form-control"placeholder="Username" formControlName="userName" [ngClass]="{error :getControl('userName')?.errors && getControl('userName')?.touched}">
+          <div *ngIf="getControl('userName')?.errors && getControl('userName')?.touched">
+            <small class="text-danger" *ngIf="getControl('userName')?.errors?.['required']">Username  Required</small>
+            <small class="text-danger" *ngIf="getControl('userName')?.errors?.['minlength']">minimum 4 characters</small>
+          </div>
+           <br>
+           <input type="email" class="form-control"placeholder="Email" formControlName="email"[ngClass]="{error :getControl('email')?.errors && getControl('email')?.touched}">
+           <div *ngIf="getControl('email')?.errors && getControl('email')?.touched">
+            <small class="text-danger" *ngIf="getControl('email')?.errors?.['required']">Email  Required</small>
+            <small class="text-danger" *ngIf="getControl('email')?.errors?.['email']"> Please enter valid Email  </small>
+          </div>
+           <br>
+           <input type="password" class="form-control"placeholder="Password" formControlName="password"[ngClass]="{error :getControl('password')?.errors && getControl('password')?.touched}">
+           <div *ngIf="getControl('password')?.errors && getControl('password')?.touched">
+            <small class="text-danger" *ngIf="getControl('password')?.errors?.['required']">password  Required</small>
+            <small class="text-danger" *ngIf="getControl('password')?.errors?.['minlength']">minimum 6 characters</small>
+          </div>
+
+
+          </div><br>
+          <button class="button" (click)="signup()"  [disabled]="!signupForm.valid">Signup</button>
+          <!--<div class= "fill" *ngIf="!signupForm.valid ">Please Fill the Required columns</div>-->
+          <br><br>
+          <div class="loginlink">
+            Already have an account? <a routerLink="/login" class="text-primary" style="cursor: pointer;">Login Here </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
